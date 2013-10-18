@@ -29,3 +29,5 @@
 
 (defmacro ls (&rest args)
   `(u-sh:cmd "sudo" "ls" ,@args))
+
+;; EOF
