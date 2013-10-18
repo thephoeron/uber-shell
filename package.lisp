@@ -12,8 +12,8 @@
   (:nicknames #:user #:|$|)
   (:use #:cl #:uber-shell)
   (:export #:pwd
-  		     #:ls
-  		     #:ps))
+           #:ls
+           #:ps))
 
 (defpackage #:uber-shell-root
   (:nicknames #:root #:sudo)
