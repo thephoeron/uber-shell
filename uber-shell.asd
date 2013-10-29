@@ -5,8 +5,8 @@
 (require :asdf)
 
 (defpackage uber-shell-asd
-  (:nicknames #:u-sh)
-  (:use #:cl)
+  (:nicknames #:u-sh-asd)
+  (:use :cl :asdf)
   (:export #:cmd))
 
 (in-package :uber-shell-asd)
@@ -17,13 +17,13 @@
 ;; we export its name so we can import it later
 (export '*uber-shell-version*)
 
-(defsystem #:uber-shell
+(defsystem uber-shell
   :serial t
-  :version #.uber-shell-version
+  :version #.*uber-shell-version*
   :description "Ultimate POSIX-Shell Integration for Steel Bank Common Lisp"
   :author "\"the Phoeron\" Colin J.E. Lupton <sysop@thephoeron.com>"
   :license "MIT"
-  :depends-on (#:cl-fad)
+  :depends-on (:cl-fad)
   :components ((:file "package")
                (:file "uber-shell")))
 
