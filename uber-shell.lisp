@@ -16,18 +16,18 @@
   #+(and sbcl (or unix linux darwin)) (sb-posix:chdir (truename path)))
 
 (defmacro pwd (&rest args)
-  `(u-sh:cmd "pwd" ,@args))
+  `(uber-shell:cmd "pwd" ,@args))
 
 (defmacro ls (&rest args)
-  `(u-sh:cmd "ls" ,@args))
+  `(uber-shell:cmd "ls" ,@args))
 
 (defmacro ps (&rest args)
-  `(u-sh:cmd "ps" ,@args))
+  `(uber-shell:cmd "ps" ,@args))
 
 ;;; UBER-SHELL-ROOT package
 (in-package #:uber-shell-root)
 
 (defmacro ls (&rest args)
-  `(u-sh:cmd "sudo" "ls" ,@args))
+  `(uber-shell:cmd "sudo" "ls" ,@args))
 
 ;; EOF
