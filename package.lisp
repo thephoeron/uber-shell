@@ -3,20 +3,19 @@
 (in-package :cl-user)
 
 (defpackage #:uber-shell
-  (:nicknames #:u-sh)
   (:use #:cl #:cl-fad)
   (:import-from :uber-shell-asd #:*uber-shell-version*)
   (:export #:cmd))
 
 (defpackage #:uber-shell-user
-  (:nicknames #:user #:|$|)
+  (:nicknames #:sh)
   (:use #:cl #:uber-shell)
   (:export #:pwd
            #:ls
            #:ps))
 
 (defpackage #:uber-shell-root
-  (:nicknames #:root #:sudo)
+  (:nicknames #:sudo)
   (:use #:cl #:uber-shell)
   (:export #:ls))
 

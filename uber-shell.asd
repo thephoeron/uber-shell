@@ -11,7 +11,7 @@
 
 (in-package :uber-shell-asd)
 
-(defvar *uber-shell-version* "0.1 alpha"
+(defvar *uber-shell-version* "0.0.1"
   "Uber-Shell's version number as a string.")
 
 ;; we export its name so we can import it later
